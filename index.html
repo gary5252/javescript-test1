@@ -11,95 +11,17 @@
 
 <body>
     <h1>JavaScript</h1>
-    <script>
-        //全域變數
-        let x = 10;
-        let radius = 10;
-        const PI = 3.1415926;
-        // let radius = prompt('輸入半徑:');
-        console.log(typeof (radius), radius + 10)
-        let area = radius ** 2 * PI
-        console.log(area)
-        // prompt() 等同於 Python 的 input()
-        {
-            // 我是註解
-            // Ctrl + / 註解快捷鍵(同 CSS)
-            // 區域變數
-            // 宣告 let 記得加 因為預設使用 var 會直接蓋過前面所有宣告那怕是在區域也會蓋過全域的
-            // const 宣告常數
-            //let 無法重複宣告 但可以重複 define
-            let y = '20';
-            console.log(x + y);
-        }
-        console.log(x);
 
-        document.write(typeof (radius), area);
+    <h3>本期大樂透</h3>
+    <div class="lotto-number">
+        <ul>
+            <li>開獎中......</li>
+        </ul>
+    </div>
+    <input type="button" id="start" value="開獎">
 
-        document.write('<h2>' + area + '</h2>');
-
-        let email = 'gary@gmail.com';
-        console.log(email);
-        //   初始     判斷式            遞增(i+=1)
-        for (let i = 0; i < email.length; i++) {
-            console.log(i, email[i]);
-        }
-        console.log(email[email.length - 1]);
-
-        console.log('A' < 'a');
-        // javascript 會自動轉換string -> number
-        console.log(25 == '25');
-        // 三個等於為值跟型態一致
-        console.log(25 === '25');
-        let z = '';
-        // '',0,null,Nan,undefine => False
-        // if/for/while ( 判斷式 ) { 程式區段 };
-        if (!z) {
-            console.log("OK");
-        }
-        x = 10;
-        y = 30;
-        z = 50;
-        if (x > y || x < z) {
-            console.log("OK");
-        }
-        // 0~1 浮點數
-        console.log(Math.random());
-        // 0~9.99999... 浮點數
-        console.log(Math.random() * 10);
-        // 0~9 整數  floor 小於等於的最大整數
-        console.log(Math.floor(Math.random() * 10));
-        // 1~10 整數  ceil 大於等於的最小整數
-        console.log(Math.ceil(Math.random() * 10));
-        // 10~100 整數                      ( end - start +1(包含終止值) ) +start
-        console.log(Math.floor(Math.random() * (100 - 10 + 1)) + 10);
-        while (true) {
-            let number = Math.floor(Math.random() * (100 - 10 + 1)) + 10;
-            console.log(number);
-            if (number == 100) {
-                break;
-            }
-        }
-
-        let lotto = ' ';
-        let list = ' ';
-        let start = 1;
-        let end = 49;
-        for (let j = 0; j < 10; j++) {
-            for (let i = 0; i < 6; i++) {
-                number = Math.floor(Math.random() * (end - start + 1)) + start;
-                lotto = `第${i + 1}個號碼為:${number}`;
-                console.log(lotto);
-                // document.write('<h3>' + lotto + '</h3>') 同下下
-                // ` 是 TAB 上面那顆 ${外接變數} 只有 ` `(反引號) 可以使用
-                // document.write(`<h3>${lotto}</h3>`);
-                list += (number + ' ');
-            }
-            document.write(`<h3>第${j + 1}組號碼:${list}</h3>`);
-            list = ' ';
-        }
-
-        console.log(list);
-
+    <script src="./js/index.js">
+        // 外接 JS 檔案 src = source資源
     </script>
 
 </body>
